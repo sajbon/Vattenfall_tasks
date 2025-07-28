@@ -1,0 +1,10 @@
+@use"_variables" as *;
+
+.power-production-chart{
+
+  &__canvas{
+    max-height: 40rem;
+    min-height: 30rem;
+    background-color: $light-blue ;
+  }
+}

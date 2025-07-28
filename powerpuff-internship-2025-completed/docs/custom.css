@@ -1,0 +1,15 @@
+
+body {
+  font-size: 1.1rem; /* Adjust this value as needed */
+}
+
+
+summary {
+  font-size: 1.3rem;
+}
+
+
+.hint { 
+  background-color: rgb(255, 255, 199);
+  font-size: 1.1rem;
+}

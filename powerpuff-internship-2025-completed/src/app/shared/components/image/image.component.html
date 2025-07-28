@@ -1,0 +1,8 @@
+<div class="image">
+    <img class="image__image" [src]="image.imageContent" [alt]="image.name ? image.name : image.title"
+        [width]="imageWidth" [height]="imageHeight" />
+    <ng-container *ngIf="style == ImageType.full">
+        <h3 class="image__title" *ngIf="style ==  ImageType.full">{{image.name ? image.name : image.title}}</h3>
+    </ng-container>
+
+</div>

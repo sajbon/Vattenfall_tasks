@@ -1,0 +1,19 @@
+<div class="reactor-list-page" *ngLet="reactors$ | async as reactors">
+  <ng-container *ngFor="let reactor of reactors">
+<!--warning-->
+  </ng-container>
+
+  <h1 class="reactor-list-page__title">{{'global.ourReactors' | translate}}</h1>
+  <h4 class="reactor-list-page__description">{{'reactorList.description' | translate}}</h4>
+  <ng-container *ngIf="!(loading$ |async) else loading">
+    <ng-container *ngFor="let reactor of reactors">
+      <app-reactor-component class="reactor-list-page__reactors" [reactorModel]="reactor" [id]="reactor.id">
+      </app-reactor-component>
+    </ng-container>
+  </ng-container>
+
+</div>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

@@ -1,0 +1,49 @@
+@use "_variables" as *;
+
+.footer {
+  height: 34rem;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #1e324f;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 1rem 16rem 0 16rem;
+    color: $white;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+
+    &__column {
+      margin-right: 3rem;
+      max-width: 26.2rem;
+
+      &__title {
+        border-bottom: 1px solid $white;
+        max-width: 25rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 15.6rem;
+    grid-column: 3;
+
+    &__image {
+      width: 14.1rem;
+      height: 2.1702rem;
+      background-image: url(../../../../assets/images/logo_white.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use"_variables" as *;
+
+.image {
+  &__description {
+    padding: 0 8rem;
+  }
+  &__more {
+    text-decoration: none;
+    color: #{$ocean-blue};
+  }
+}

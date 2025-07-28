@@ -1,0 +1,15 @@
+@use"_variables" as *;
+
+.header {
+  height: 9rem;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 10.5rem;
+
+  &__logo {
+    align-self: center;
+    justify-self: center;
+    height: 6rem;
+  }
+}

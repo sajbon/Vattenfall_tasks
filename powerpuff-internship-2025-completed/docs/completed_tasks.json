@@ -1,0 +1,94 @@
+{
+  "FE": {
+    "completed_tasks": [
+      {
+        "task_id": 1,
+        "task_name": "Favicon",
+        "completed": false,
+        "completion_date": ""
+      },
+      {
+        "task_id": 2,
+        "task_name": "Back to Home page button",
+        "completed": false,
+        "completion_date": ""
+      },
+      {
+        "task_id": 3,
+        "task_name": "Our locations",
+        "completed": false,
+        "completion_date": " "
+      },
+      {
+        "task_id": 4,
+        "task_name": "Carousel - adjustments",
+        "completed": false,
+        "completion_date": " "
+      },
+      {
+        "task_id": 5,
+        "task_name": "Footer - Links update",
+        "completed": false,
+        "completion_date": " "
+      },
+      {
+        "task_id": 6,
+        "task_name": "Footer - Back to top",
+        "completed": false,
+        "completion_date": " "
+      },
+      {
+        "task_id": 7,
+        "task_name": "Safety system status - part 1",
+        "completed": false,
+        "completion_date": " "
+      },
+      {
+        "task_id": 8,
+        "task_name": "Safety system status - part 2",
+        "completed": false,
+        "completion_date": " "
+      },
+      {
+        "task_id": 9,
+        "task_name": "Safety system status - part 3",
+        "completed": false,
+        "completion_date": " "
+      }
+    ]
+  },
+  "BE": {
+    "completed_tasks": [
+      {
+        "task_id": 1,
+        "task_name": "Integrate with FrontendApplication",
+        "completed": false,
+        "completion_date": ""
+      },
+      {
+        "task_id": 2,
+        "task_name": "Upload reactor images",
+        "completed": false,
+        "completion_date": ""
+      },
+      {
+        "task_id": 3,
+        "task_name": "Adjust ReactorList api endpoint",
+        "completed": false,
+        "completion_date": ""
+      },
+      {
+        "task_id": 4,
+        "task_name": "Create new endpoint to fetch ReactorLocations",
+        "completed": false,
+        "completion_date": ""
+      },
+      {
+        "task_id": 5,
+        "task_name": "Reactor Statuses",
+        "completed": false,
+        "completion_date": ""
+      }
+    ]
+  }
+}

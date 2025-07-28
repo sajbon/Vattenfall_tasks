@@ -1,0 +1,9 @@
+@use"_variables" as *;
+
+.core-temperature-chart {
+  &__canvas{
+    max-height: 40rem;
+    min-height: 30rem;
+    background-color: #{$light-blue} ;
+  }
+}

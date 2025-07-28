@@ -1,0 +1,43 @@
+<div class="welcome"
+  *ngLet="{ safetyStatus: safetyStatus$ | async, reactorList: reactorList$ |async,  safetyStatusLoading: safetyStatusLoading$ | async, reactorListLoading: reactorListLoading$ |async} as data">
+  <h1 class="welcome__title">{{'welcome.welcome' | translate}}</h1>
+  <p class="welcome__paragraph">{{'welcome.siteDesc' | translate}}</p>
+  <a href="reactors"><custom-btn label="{{'welcome.seeOurReactors' | translate}}"></custom-btn></a>
+  <div class="welcome__status">
+    <h2>{{'global.safetyStatus' | translate}}</h2>
+    <ng-container *ngIf="!data.safetyStatusLoading else loading">
+      <p class="welcome__paragraph">{{'welcome.safetyStatusDesc' | translate}}</p>
+      <div class="welcome__status__section"
+        [ngClass]="{'welcome__status__section--full': data.safetyStatus.statusPowerProduction == Status.inRange && data.safetyStatus.statusCoreTemperature == Status.inRange}">
+<!--status-->
+        <!--warning-->
+      </div>
+
+      <app-legend></app-legend>
+      <a href="reactors"><custom-btn label="{{'welcome.seeAll' | translate}}"
+          [type]="ButtonType.outlined"></custom-btn></a>
+    </ng-container>
+  </div>
+
+  <div>
+    <h2>{{'global.ourLocations' | translate}}</h2>
+    <p class="welcome__paragraph"> {{'welcome.locationsDesc' | translate}}</p>
+    <ng-container *ngIf="!data.locationImageLoading else loading">
+<!--Location image-->
+    </ng-container>
+  </div>
+  <div>
+    <h2>{{'global.ourReactors' | translate}}</h2>
+    <ng-container *ngIf="!data.reactorListLoading else loading">
+
+      <p class="welcome__paragraph"> {{'welcome.reactorsDesc' | translate}}</p>
+      <app-carousel [elementsList]="data.reactorList"></app-carousel>
+      <a href="reactors"> <custom-btn label="{{'welcome.seeAll' | translate}}" [type]="ButtonType.outlined">
+        </custom-btn></a>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

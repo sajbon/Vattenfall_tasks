@@ -1,0 +1,40 @@
+{
+    "global": {
+        "ourReactors": "Our reactors",
+        "ourLocations": "Our locations",
+        "safetyStatus": "Safety status status",
+        "statuses": {
+            "inRange": "In range",
+            "outOfRange": "Out of range",
+            "critical": "Critical",
+            "inRangeDesc": "Parameter within safe range",
+            "outOfRangeDesc": "Parameter out of range",
+            "criticalDesc": "Parameter critically out of range",
+            "statusDetails": "Status details",
+            "coreTemp": "Core temperature",
+            "powerProd": "Power production output",
+            "status": "Overall system status:"
+        },
+        "backToTop": "Back to top",
+        "home": "Home",
+        "return": "Return home"
+    },
+    "welcome": {
+        "welcome": "Welcome!",
+        "siteDesc": "Lorem ipsum dolor sit amet consectetur. Adipiscing non pulvinar placerat lorem ullamcorper magna. Pulvinar bibendum enim eget nullam lacus urna. Consequat lorem lectus imperdiet tincidunt. Orci magnis tempus tempus sit.",
+        "safetyStatusDesc": "Lorem ipsum dolor sit amet consectetur. Adipiscing non pulvinar placerat lorem ullamcorper magna. Pulvinar bibendum enim.",
+        "locationsDesc": "Lorem ipsum dolor sit amet consectetur. Adipiscing non pulvinar placerat lorem ullamcorper magna. Pulvinar bibendum enim eget nullam lacus urna. Consequat lorem lectus imperdiet tincidunt. Orci magnis tempus tempus sit",
+        "reactorsDesc": "Lorem ipsum dolor sit amet consectetur. Adipiscing non pulvinar placerat lorem ullamcorper magna. Pulvinar bibendum enim eget nullam lacus urna. Consequat lorem lectus imperdiet tincidunt. Orci magnis tempus tempus sit",
+        "learnMore": "Learn more",
+        "seeAll": "See all reactors",
+        "seeOurReactors": "See our reactors"
+    },
+    "reactorList": {
+        "description": "Lorem ipsum dolor sit amet consectetur. Adipiscing non pulvinar placerat lorem ullamcorper magna. Pulvinar bibendum enim eget nullam lacus urna. Consequat lorem lectus imperdiet tincidunt. Orci magnis tempus tempus sit.",
+        "charts": {
+            "coreTemp": "Core temperature",
+            "powerProd": "Power production output"
+        },
+        "links": "Useful links:"
+    }
+}

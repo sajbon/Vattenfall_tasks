@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        name: 'Powerpuff Internship Program 2025',
+        repo: 'powerpuff-internship',
+        loadSidebar: true,
+        coverpage: true,
+        subMaxLevel: 1,
+        copyCode: {
+          buttonText: 'Copy to clipboard',
+          errorText: 'Error',
+          successText: 'Copied',
+        },
+      };
+    </script>
+    <script>
+      setTimeout(() => {
+        if (document.getElementById('json-content-1')) {
+          fetch('completed_tasks.json')
+            .then(response => response.json())
+            .then(data => {
+              if (data.FE) {
+                data.FE.completed_tasks.forEach(task => {
+                  if (task.completed) {
+                    document.getElementById('json-content-' + task.task_id).innerHTML = `
+                  <span style="padding: 10px; background: #3dc07ca2; font-size: 0.7rem; margin-top: -10px">
+                    <strong> COMPLETED ${task.completion_date}</strong>
+                  </span>
+                `;
+                  } else {
+                    document.getElementById('json-content-' + task.task_id).innerHTML = `
+                  <span style="padding: 10px; background: #f58888b9; font-size: 0.7rem">
+                    <strong> PENDING </strong>
+                  </span>
+                `;
+                  }
+                });
+              }
+            });
+        }
+      }, 200);
+    </script>
+    <script>
+      setTimeout(() => {
+        if (document.getElementById('json-content-BE-1')) {
+          fetch('completed_tasks.json')
+            .then(response => response.json())
+            .then(data => {
+              if (data.BE) {
+                data.BE.completed_tasks.forEach(task => {
+                  if (task.completed) {
+                    document.getElementById('json-content-BE-' + task.task_id).innerHTML = `
+                  <span style="padding: 10px; background: #3dc07ca2; font-size: 0.7rem; margin-top: -10px">
+                    <strong> COMPLETED ${task.completion_date}</strong>
+                  </span>
+                `;
+                  } else {
+                    document.getElementById('json-content-BE-' + task.task_id).innerHTML = `
+                  <span style="padding: 10px; background: #f58888b9; font-size: 0.7rem">
+                    <strong> PENDING </strong>
+                  </span>
+                `;
+                  }
+                });
+              }
+            });
+        }
+      }, 200);
+    </script>
+
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  </body>
+</html>
