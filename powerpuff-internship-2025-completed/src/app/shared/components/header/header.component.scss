@@ -1,15 +1,49 @@
-@use"_variables" as *;
+@use "_variables" as *;
 
 .header {
   height: 9rem;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 0 10.5rem;
+  position: relative;  // <-- dodałem brakujący średnik!
 
   &__logo {
     align-self: center;
     justify-self: center;
     height: 6rem;
   }
+}
+
+.button__icon__wrapper {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
+  justify-content: flex-start;
+  padding: 0 0.25rem;
+  margin: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button__icon__wrapper__icon {
+  width: 60px;
+  height: 50px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px; // odstęp między ikoną a tekstem
+  background-image: url('/assets/icons/home.svg');
+}
+
+.button__text {
+  display: inline-block;
+  padding-top: 8px;  // przesunięcie tekstu niżej
+  line-height: 1;    // dla lepszej kontroli wysokości linii
 }
