@@ -16,7 +16,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ReactorStatusService {
   environments = {
-    baseUrl: 'https://powerpuffintershipbe.azurewebsites.net/api',
+    // baseUrl: 'https://powerpuffintershipbe.azurewebsites.net/api',
+    baseUrl: 'https://localhost:7230/api',
     reactorImageList: '/Reactor/image-list',
     reactorList: '/Reactor',
   };
@@ -31,10 +32,11 @@ export class ReactorStatusService {
 
   getReactors(): Observable<ReactorModel[]> {
     const url = this.environments.baseUrl + this.environments.reactorList;
-    // return this.http
-    //   .get<ReactorModelDTO[]>(url)
-    //   .pipe(map((response) => toReactorModel(response)));
-    return of(toReactorModel(dataReactor.list as ReactorModelDTO[]));
+    // Backend hits front cuz of this
+    return this.http
+      .get<ReactorModelDTO[]>(url)
+      .pipe(map((response) => toReactorModel(response)));
+    // return of(toReactorModel(dataReactor.list as ReactorModelDTO[]));
   }
 
   getReactorsSafetyStatus(): Observable<SafetyStatusModel> {    
