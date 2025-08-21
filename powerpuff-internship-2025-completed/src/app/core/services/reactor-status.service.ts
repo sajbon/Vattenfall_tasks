@@ -5,6 +5,10 @@ import * as dataReactorImages from '../../../assets/mocks/reactorsImages.json';
 import * as dataReactor from '../../../assets/mocks/reactors.json';
 import * as dataImage from '../../../assets/mocks/images.json';
 
+// dodane test
+// import { forkJoin, switchMap } from 'rxjs';
+
+
 import { ReactorModel, ReactorModelDTO } from '../models/reactor.model';
 import { Status } from '../enums/status.enum';
 import { SafetyStatusModel } from '../models/safetyStatus.model';
@@ -16,7 +20,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ReactorStatusService {
   environments = {
-    baseUrl: 'https://powerpuffintershipbe.azurewebsites.net/api',
+    // baseUrl: 'https://powerpuffintershipbe.azurewebsites.net/api',
+    baseUrl: 'https://localhost:7230/api',
     reactorImageList: '/Reactor/image-list',
     reactorList: '/Reactor',
   };
@@ -25,16 +30,17 @@ export class ReactorStatusService {
 
   getReactorImagesList(): Observable<ImageModel[]> {
     const url = this.environments.baseUrl + this.environments.reactorImageList;
-    // return this.http.get<ImageModel[]>(url);
-    return of(dataReactorImages.images as ImageModel[]);
+    return this.http.get<ImageModel[]>(url);
+    // return of(dataReactorImages.images as ImageModel[]);
   }
 
   getReactors(): Observable<ReactorModel[]> {
     const url = this.environments.baseUrl + this.environments.reactorList;
-    // return this.http
-    //   .get<ReactorModelDTO[]>(url)
-    //   .pipe(map((response) => toReactorModel(response)));
-    return of(toReactorModel(dataReactor.list as ReactorModelDTO[]));
+    // Backend hits front cuz of this
+    return this.http
+      .get<ReactorModelDTO[]>(url)
+      .pipe(map((response) => toReactorModel(response)));
+    // return of(toReactorModel(dataReactor.list as ReactorModelDTO[]));
   }
 
   getReactorsSafetyStatus(): Observable<SafetyStatusModel> {    

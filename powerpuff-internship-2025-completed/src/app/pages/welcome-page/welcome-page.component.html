@@ -23,7 +23,7 @@
     <h2>{{'global.ourLocations' | translate}}</h2>
     <p class="welcome__paragraph"> {{'welcome.locationsDesc' | translate}}</p>
     <ng-container *ngIf="!data.locationImageLoading else loading">
-<!--Location image-->
+      <app-map></app-map>
     </ng-container>
   </div>
   <div>

@@ -14,3 +14,4 @@ export class FooterComponent {
       ?.scrollIntoView({ block: 'end', behavior: 'smooth' });
   }
 }
+
