@@ -1,12 +1,58 @@
 <div class="footer">
+  <!-- Back to top -->
+  <div class="footer__back-to-top" (click)="scrollToHeader()">
+    <div class="footer__back-to-top--arrow"></div>
+    Back to top
+  </div>
+
+  <!-- Columns -->
   <div class="footer__container">
+    <!-- Column 1 -->
     <div class="footer__container__column">
       <h5 class="footer__container__column__title">About Vattenfall</h5>
-      <p>Vattenfall is a European energy company with approximately 21,000 employees. For more than 100 years we have
-        electrified industries, supplied energy to people's homes and modernised our way of living through innovation
-        and cooperation. We are working for fossil freedom.</p>
+      <p>
+        Vattenfall is a European energy company with approximately 21,000 employees.
+        For more than 100 years we have electrified industries, supplied energy to people's homes
+        and modernised our way of living through innovation and cooperation.
+        We are working for fossil freedom.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer__container__column">
+      <h5 class="footer__container__column__title">Vattenfall Websites:</h5>
+      <a href="https://group.vattenfall.com/" target="_blank">group.vattenfall.com</a><br>
+      <a href="https://www.vattenfall.se/" target="_blank">vattenfall.se</a><br>
+      <a href="https://www.vattenfall.de/" target="_blank">vattenfall.de</a><br>
+      <a href="https://www.vattenfall.co.uk/" target="_blank">vattenfall.co.uk</a><br>
+      <a href="https://www.vattenfall.dk/" target="_blank">vattenfall.dk</a><br>
+      <a href="https://www.vattenfall.fi/" target="_blank">vattenfall.fi</a><br>
+      <a href="https://group.vattenfall.com/nl" target="_blank">group.vattenfall.com/nl</a>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer__container__column">
+      <h5 class="footer__container__column__title">Follow us</h5>
+      <div class="footer__container__column__icon">
+        <a class="footer__container__column__icon--twitter"
+           href="https://x.com/VattenfallGroup"
+           target="_blank"
+           aria-label="Twitter"></a>
+
+        <a class="footer__container__column__icon--instagram"
+           href="https://www.instagram.com/vattenfall/"
+           target="_blank"
+           aria-label="Instagram"></a>
+
+        <a class="footer__container__column__icon--linkedin"
+           href="https://www.linkedin.com/company/vattenfall/"
+           target="_blank"
+           aria-label="LinkedIn"></a>
+      </div>
     </div>
   </div>
+
+  <!-- Logo -->
   <div class="footer__logo">
     <div class="footer__logo__image"></div>
   </div>

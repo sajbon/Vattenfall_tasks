@@ -1,0 +1,14 @@
+#map {
+    width: 100%;        // full width of parent container
+    height: 400px;      // fixed height
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;   // prevent tiles from overflowing
+  }
+  .map-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden; // critical!
+    border-radius: 8px;
+  }
+  

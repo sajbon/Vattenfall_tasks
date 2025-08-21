@@ -15,10 +15,12 @@ import {SafetyStatusModel} from '../../core/models/safetyStatus.model';
 import {Observable} from 'rxjs';
 import {CommonModule} from '@angular/common';
 import {Status} from '../../core/enums/status.enum';
+import { MapComponent } from "../../map/map.component";
 
 @Component({
   selector: 'app-welcome-page',
-  imports: [SharedModule, CommonModule],
+  standalone: true,
+  imports: [SharedModule, CommonModule, MapComponent],
   templateUrl: './welcome-page.component.html',
   styleUrl: './welcome-page.component.scss'
 })

@@ -5,6 +5,10 @@ import * as dataReactorImages from '../../../assets/mocks/reactorsImages.json';
 import * as dataReactor from '../../../assets/mocks/reactors.json';
 import * as dataImage from '../../../assets/mocks/images.json';
 
+// dodane test
+// import { forkJoin, switchMap } from 'rxjs';
+
+
 import { ReactorModel, ReactorModelDTO } from '../models/reactor.model';
 import { Status } from '../enums/status.enum';
 import { SafetyStatusModel } from '../models/safetyStatus.model';
@@ -26,8 +30,8 @@ export class ReactorStatusService {
 
   getReactorImagesList(): Observable<ImageModel[]> {
     const url = this.environments.baseUrl + this.environments.reactorImageList;
-    // return this.http.get<ImageModel[]>(url);
-    return of(dataReactorImages.images as ImageModel[]);
+    return this.http.get<ImageModel[]>(url);
+    // return of(dataReactorImages.images as ImageModel[]);
   }
 
   getReactors(): Observable<ReactorModel[]> {
